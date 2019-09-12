@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 
 int *inputArray() {
     int l;
@@ -15,14 +13,14 @@ int *inputArray() {
     return t;
 }
 
-int printArray(int *v, int n) {
+void printArray(int *v, int n) {
     for (int i = 0; i < n; i++) {
         printf("%d\n", *(v + i));
     }
 }
 
 int sumArray(int t[], int s) {
-    //TODO Zadanie domowe
+    // TODO Zadanie domowe
 }
 
 int main() {
