@@ -19,12 +19,18 @@ void printArray(int *v, int n) {
     }
 }
 
-int sumArray(int t[], int s) {
-    // TODO Zadanie domowe
+int sumArray(int a[], int n) {
+    int sum = 0;
+    for (int i = 0; n > i; i++) {
+        sum = sum + a[i];
+    }
+    return sum;
 }
 
 int main() {
-    int *t = inputArray();
-    printArray(t, 4);
+    int t[] = {1,2,3,4,5};
+    int n = sizeof(t) / sizeof(t[0]);
+    int sum = sumArray(t, n);
+    printf("%i", sum);
     return 0;
 }
