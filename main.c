@@ -27,6 +27,14 @@ int sumArray(int a[], int n) {
     return sum;
 }
 
+float avgArray(int t[], int n){
+    float sum = 0;
+    for (int i = 0; i < n; ++i) {
+        sum = sum + t[i];
+    }
+    return sum/n;
+};
+
 int main() {
     int t[] = {1,2,3,4,5};
     int n = sizeof(t) / sizeof(t[0]);
