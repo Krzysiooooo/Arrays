@@ -27,18 +27,30 @@ int sumArray(int a[], int n) {
     return sum;
 }
 
-float avgArray(int t[], int n){
+float avgArray(int t[], int n) {
     float sum = 0;
     for (int i = 0; i < n; ++i) {
         sum = sum + t[i];
     }
-    return sum/n;
+    return sum / n;
 };
 
+int minArray(int t[], int n) {
+    int min = t[0];
+    for (int i = 1; i < n; ++i) {
+        if (t[i] < min) {
+            min = t[i];
+        }
+    }
+    return min;
+}
+
+// TODO Napisac funkcje znajdujaca maksimum tablicy (najwiekszy element) maxArray
+
 int main() {
-    int t[] = {1,2,3,4,5};
+    int t[] = {11, 20, 2, 44, 59};
     int n = sizeof(t) / sizeof(t[0]);
-    int sum = sumArray(t, n);
-    printf("%i", sum);
+    int min = minArray(t, n);
+    printf("%i", min);
     return 0;
 }
