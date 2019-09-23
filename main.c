@@ -1,5 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+int maxArray(int t[], int n) {
+    int max = t[0];
+    for (int i = 1; i < n; ++i) {
+        if (t[i] > max) {
+            max = t[i];
+        }
+    }
+    return max;
+}
 
 int *inputArray() {
     int l;
@@ -51,6 +60,7 @@ int main() {
     int t[] = {11, 20, 2, 44, 59};
     int n = sizeof(t) / sizeof(t[0]);
     int min = minArray(t, n);
-    printf("%i", min);
+    int max = maxArray(t, n);
+    printf("%i", max);
     return 0;
 }
