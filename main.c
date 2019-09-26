@@ -86,7 +86,7 @@ int main() {
     int t[] = {11, 20, 2, 59, 120, 2, 88, 1};
     int n = sizeof(t) / sizeof(t[0]);
     //bubbleSort(t, n);
-    insertationSort(t, n);
+    insertionSort(t,n);
     printArray(t, n);
     //int min = minArray(t, n);
     //int max = maxArray(t, n);
