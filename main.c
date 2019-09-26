@@ -1,14 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-int maxArray(int t[], int n) {
-    int max = t[0];
-    for (int i = 1; i < n; ++i) {
-        if (t[i] > max) {
-            max = t[i];
-        }
-    }
-    return max;
-}
 
 int *inputArray() {
     int l;
@@ -54,10 +45,18 @@ int minArray(int t[], int n) {
     return min;
 }
 
-// TODO Napisac funkcje znajdujaca maksimum tablicy (najwiekszy element) maxArray
+int maxArray(int t[], int n) {
+    int max = t[0];
+    for (int i = 1; i < n; ++i) {
+        if (t[i] > max) {
+            max = t[i];
+        }
+    }
+    return max;
+}
 
 int main() {
-    int t[] = {11, 20, 2, 44, 59};
+    int t[] = {11, 20, 2, 59, 120};
     int n = sizeof(t) / sizeof(t[0]);
     int min = minArray(t, n);
     int max = maxArray(t, n);
