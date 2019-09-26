@@ -68,10 +68,25 @@ void bubbleSort(int *t, int l) {
     }
 }
 
+void insertionSort(int *t, int l) {
+    int tmp, j;
+    for (int m = 1; m < l - 1; ++m) {
+        tmp = t[m + 1];
+        j = m;
+        while (tmp < t[j] && j >= 0) {
+            t[j + 1] = t[j];
+            j--;
+        }
+        t[j + 1] = tmp;
+    }
+}
+
+
 int main() {
-    int t[] = {11, 20, 2, 59, 120, 1};
+    int t[] = {11, 20, 2, 59, 120, 2, 88, 1};
     int n = sizeof(t) / sizeof(t[0]);
-    bubbleSort(t, n);
+    //bubbleSort(t, n);
+    insertationSort(t, n);
     printArray(t, n);
     //int min = minArray(t, n);
     //int max = maxArray(t, n);
