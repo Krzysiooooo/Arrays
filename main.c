@@ -55,11 +55,26 @@ int maxArray(int t[], int n) {
     return max;
 }
 
+void bubbleSort(int *t, int l) {
+    int tmp;
+    for (int i = 0; i < l - 1; ++i) {
+        for (int j = 0; j < l - i - 1; ++j) {
+            if (t[j] > t[j + 1]) {
+                tmp = t[j + 1];
+                t[j + 1] = t[j];
+                t[j] = tmp;
+            }
+        }
+    }
+}
+
 int main() {
-    int t[] = {11, 20, 2, 59, 120};
+    int t[] = {11, 20, 2, 59, 120, 1};
     int n = sizeof(t) / sizeof(t[0]);
-    int min = minArray(t, n);
-    int max = maxArray(t, n);
-    printf("%i", max);
+    bubbleSort(t, n);
+    printArray(t, n);
+    //int min = minArray(t, n);
+    //int max = maxArray(t, n);
+    //printf("%i", max);
     return 0;
 }
